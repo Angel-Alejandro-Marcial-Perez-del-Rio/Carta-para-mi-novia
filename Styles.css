@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe0e9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Botón animado */
+button {
+    position: absolute;
+    top: 20px;
+    padding: 12px 24px;
+    background-color: #d62828;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #a81d1d;
+    transform: scale(1.05);
+}
+
+/* Carta oculta por defecto */
+#cartaContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo de la carta */
+.carta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Estilo del mensaje */
+.mensaje {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #d62828;
+}
+
+.corazon {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: flotar 5s linear infinite;
+}
+
+@keyframes flotar {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
